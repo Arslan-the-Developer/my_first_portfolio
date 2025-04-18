@@ -1,2 +1,17 @@
 @import 'tailwindcss';
 
+@theme{
+
+    --color-primary : #05191c;
+    --color-secondary : #f2f2f2;
+    --color-dull : #1c1c1c;
+    --color-less-primary : #09343b;
+
+    --font-monty : "Montserrat", sans-serif;
+    --font-poiret : "Poiret One", sans-serif;
+    --font-jura : "Jura", sans-serif;
+    --font-barlow : "Barlow Condensed", sans-serif;
+    --font-grot : "Dark Grotesque", sans-serif;
+    --font-poppins : "Poppins", sans-serif;
+
+}
