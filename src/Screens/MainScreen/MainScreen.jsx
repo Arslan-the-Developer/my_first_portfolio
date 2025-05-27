@@ -1,216 +1,89 @@
-import React, { useState } from 'react'
-import selfPic from '../../assets/profile-pic.png';
-import ShinyText from '../../Components/ReactBitComponents/ShinyText/ShinyText'
-import RotatingText from '../../Components/ReactBitComponents/RotatingText/RotatingText';
-import FiverrLogo from '../../assets/FiverrLogo';
-import InstagramLogo from '../../assets/InstagramLogo';
-import GithubLogo from '../../assets/GithubLogo';
-import LinkedInLogo from '../../assets/LinkedInLogo'
-import FacebookLogo from '../../assets/FacebookLogo'
-import WhatsAppLogo from '../../assets/WhatsAppLogo';
-import AboutTab from '../TabScreens/AboutTab';
-import ResumeTab from '../TabScreens/ResumeTab';
-import WorksTab from '../TabScreens/WorksTab';
-import StatsTab from '../TabScreens/StatsTab';
-import ExpertiseTab from '../TabScreens/ExpertiseTab';
-import ContactTab from '../TabScreens/ContactTab';
+import React, { useEffect, useState } from 'react'
+import { motion } from 'motion/react';
+import GridDistortion from '../../Components/ReactBitComponents/GridDistortion/GridDistortion';
+import PicOne from '../../assets/pl1.jpg'
+import PicTwo from '../../assets/pl2.jpg'
+import PicThree from '../../assets/pl3.jpg'
+import PicFour from '../../assets/pl4.jpg'
 
 
 function MainScreen() {
 
-  const [isAboutTabActive, setAboutTabActive] = useState(true);
-  const [isResumeTabActive, setResumeTabActive] = useState(false);
-  const [isWorksTabActive, setWorksTabActive] = useState(false);
-  const [isStatsTabActive, setStatsTabActive] = useState(false);
-  const [isExpertiseTabActive, setExpertiseTabActive] = useState(false);
-  const [isContactTabActive, setContactTabActive] = useState(false);
-
-  function setTabActive(tab_name) {
-
-    switch (tab_name) {
-
-      case 'about':
-        setAboutTabActive(true);
-        setResumeTabActive(false);
-        setWorksTabActive(false);
-        setStatsTabActive(false);
-        setExpertiseTabActive(false);
-        setContactTabActive(false);
-        break;
-      
-      case 'resume':
-        setAboutTabActive(false);
-        setResumeTabActive(true);
-        setWorksTabActive(false);
-        setStatsTabActive(false);
-        setExpertiseTabActive(false);
-        setContactTabActive(false);
-        break;
-      
-      case 'works':
-        setAboutTabActive(false);
-        setResumeTabActive(false);
-        setWorksTabActive(true);
-        setStatsTabActive(false);
-        setExpertiseTabActive(false);
-        setContactTabActive(false);
-        break;
-      
-      case 'stats':
-        setAboutTabActive(false);
-        setResumeTabActive(false);
-        setWorksTabActive(false);
-        setStatsTabActive(true);
-        setExpertiseTabActive(false);
-        setContactTabActive(false);
-        break;
-      
-      case 'expertise':
-        setAboutTabActive(false);
-        setResumeTabActive(false);
-        setWorksTabActive(false);
-        setStatsTabActive(false);
-        setExpertiseTabActive(true);
-        setContactTabActive(false);
-        break;
-      
-      case 'contact':
-        setAboutTabActive(false);
-        setResumeTabActive(false);
-        setWorksTabActive(false);
-        setStatsTabActive(false);
-        setExpertiseTabActive(false);
-        setContactTabActive(true);
-        break;
-    
-      default:
-        break;
-    }
-    
-  }
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
     
-    <section className='w-full h-full flex items-center justify-center bg-transparent z-10'>
+    <section className='w-full h-screen bg-dull flex flex-col items-center justify-center relative'>
 
-        <div className='w-3/10 h-8/10 relative  p-2 flex flex-col items-center justify-start rounded-sm'>
+      <GridDistortion
+        imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        grid={10}
+        mouse={0.3}
+        strength={0.15}
+        relaxation={0.9}
+        className="absolute opacity-50"
+      />
 
-            <div className='w-50 h-50 rounded-full bg-[#0d4952] p-2' style={{zIndex : 2, boxShadow : "0 0 10px 0px rgba(0,0,0,.5)"}}>
-                <img className='w-full h-full object-center object-contain' src={selfPic} alt="" />
-            </div>
-            <div className='absolute w-50 h-50 rounded-full bg-[#0d4952] p-3 translate-y-4 -translate-x-4 animate-spin border-r-2 border-[#14afc7] opacity-50' style={{zIndex : 1, boxShadow : "0 0 10px 0px rgba(0,0,0,.5)", animationDelay : "250ms"}}></div>
-            <div className='absolute w-50 h-50 rounded-full bg-[#0d4952] p-3 -translate-y-4 translate-x-4 animate-spin border-r-2 border-[#14afc7] opacity-50' style={{zIndex : 1, boxShadow : "0 0 10px 0px rgba(0,0,0,.5)"}}></div>
-            <div className='absolute w-50 h-50 rounded-full bg-[#0d4952] p-3 translate-y-4 translate-x-4 animate-spin border-r-2 border-[#14afc7] opacity-50' style={{zIndex : 1, boxShadow : "0 0 10px 0px rgba(0,0,0,.5)", animationDelay : "500ms"}}></div>
+      <div className='w-full h-full absolute pointer-events-none bg-linear-to-t from-dull to-transparent from-5%'>
 
-            <ShinyText text="- Arslan Ahmed -" disabled={false} speed={2} className='font-poppins font-semibold tracking-wide text-2xl mt-12' />
-            
-            {/* <hr className='w-30 border border-[#017c8f]' /> */}
+      </div>
 
-            <RotatingText
-              texts={['Programmer', 'Full Stack Developer', 'Freelancer', 'API Expert']}
-              mainClassName="text-[#017c8f] font-jura font-semibold tracking-wide mt-5 uppercase overflow-hidden justify-center text-xl"
-              staggerFrom={"first"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={3500}
-            />
+      <div className='min-w-[450px] w-7/10 h-full flex flex-col items-start justify-start pointer-events-none' style={{zIndex : "2"}}>
 
-            <div className='flex flex-col items-center justify-start mt-8 w-1/2'>
+        <nav className='flex items-center justify-between h-18 w-full'>
 
-              <div className='flex items-center justify-around w-full'>
+          <button onClick={() => setMenuOpen(!isMenuOpen)} className='flex items-center justify-center cursor-pointer pointer-events-auto'>
+            {
+              !isMenuOpen ? (
+                <motion.span initial={{opacity : 0}} animate={{opacity : 100}}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={30} height={30} color={"#ffffff"} fill={"none"}>
+                      <path d="M4 9L20 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M4 15L14 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </motion.span>
+              ) : (
+                <motion.svg initial={{opacity : 0, scale : 0.7}} animate={{opacity : 100, scale : 1}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ffffff"} fill={"none"}>
+                    <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                </motion.svg>
+              )
+            }
+          </button>
 
-                <FiverrLogo />
-                
-                <InstagramLogo />
-                
-                <GithubLogo />
+          <button className='px-7 py-3 bg-white rounded-full font-poppins relative overflow-hidden flex items-center justify-center group transition-all cursor-pointer pointer-events-auto'>
+            <span className='w-full h-full bg-white flex items-center justify-center transition-all group-hover:-translate-x-full'>Lets Talk</span>
+            <span className='w-full h-full bg-linear-to-l from-primary to-white absolute flex items-center justify-center translate-x-full transition-all shadow-md group-hover:translate-x-0'>Lets Talk</span>
+          </button>
 
-              </div>
-              
-              <div className='flex items-center justify-around w-full mt-4'>
+        </nav>
 
-                <LinkedInLogo />
-                
-                <FacebookLogo />
-                
-                <WhatsAppLogo />
+        <div className='w-full flex items-center justify-center flex-col h-6/10 relative'>
 
-              </div>
+          <h1 className='font-future text-primary tracking-wider' style={{fontSize : "8.5rem", lineHeight : '1.3'}}>ARSLAN</h1>
+          <h1 className='font-future text-primary tracking-wider' style={{fontSize : "8.5rem", lineHeight : '1.3'}}>AHMAD</h1>
 
-            </div>
-
+          <img className='w-60 h-60 rounded-full object-contain object-center aspect-square absolute bg-primary-translucent p-3' style={{boxShadow : "0 0 20px 0px #000000"}} src={PicThree} alt="" />
 
         </div>
-        
-        <div className='w-5/10 h-7/10 ml-2 flex items-start justify-start rounded-sm'>
 
-          <nav className='h-full w-20 bg-[#0d4952] -translate-x-2 rounded-sm flex flex-col items-center justify-between py-4' style={{boxShadow : "0 0 10px 0px rgba(0,0,0,.4)"}}>
+        <div className='w-full flex flex-col items-center justify-center'>
 
-            <i onClick={() => setTabActive('about')} className={`bi bi-person-fill text-2xl transition cursor-pointer ${isAboutTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
-            <hr className='border border-white opacity-5 w-full' />
+          <div className='w-full flex items-center justify-center'>
 
-            <i onClick={() => setTabActive('resume')} className={`bi bi-book-half text-2xl transition cursor-pointer ${isResumeTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
-            <hr className='border border-white opacity-5 w-full' />
-
-            <i onClick={() => setTabActive('works')} className={`bi bi-eye-fill text-2xl transition cursor-pointer ${isWorksTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
-            <hr className='border border-white opacity-5 w-full' />
-
-            <i onClick={() => setTabActive('stats')} className={`bi bi-grid-1x2-fill text-2xl transition cursor-pointer ${isStatsTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
-            <hr className='border border-white opacity-5 w-full' />
-
-            <i onClick={() => setTabActive('expertise')} className={`bi bi-bar-chart-line-fill text-2xl transition cursor-pointer ${isExpertiseTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
-            <hr className='border border-white opacity-5 w-full' />
-
-            <i onClick={() => setTabActive('contact')} className={`bi bi-send-fill text-2xl transition cursor-pointer ${isContactTabActive ? 'text-[#017c8f]' : 'text-white'} hover:text-[#017c8f] hover:scale-110`}></i>
+            <span className='w-30 h-[1.5px] bg-primary rounded-full'></span>
+            <div className='mx-4 flex items-center justify-center relative'>
+              <span className='w-4 h-4 bg-primary rotate-45 rounded-sm'></span>
+              <span className='w-4 h-4 bg-primary rotate-45 absolute animate-ping rounded-sm'></span>
+            </div>
+            <span className='w-30 h-[1.5px] bg-primary rounded-full'></span>
             
-          </nav>
-
-          <div className='w-9/10 h-full bg-[#0d4952cc] rounded-sm flex items-start justify-start flex-col'>
-
-            {
-              isAboutTabActive ? (
-                <AboutTab />
-              ) : ""
-            }
-            
-            {
-              isResumeTabActive ? (
-                <ResumeTab />
-              ) : ""
-            }
-            
-            {
-              isWorksTabActive ? (
-                <WorksTab />
-              ) : ""
-            }
-            
-            {
-              isStatsTabActive ? (
-                <StatsTab />
-              ) : ""
-            }
-            
-            {
-              isExpertiseTabActive ? (
-                <ExpertiseTab />
-              ) : ""
-            }
-            
-            {
-              isContactTabActive ? (
-                <ContactTab />
-              ) : ""
-            }
-
           </div>
 
+          <p className='mt-9 w-120 text-center text-primary capitalize font-poppins font-light leading-8'>I’m Arslan Ahmad – a Full Stack Web Developer & API Expert Passionately Creating Innovative, Scalable, and Secure Web Solutions to empower businesses For Over 3 Years</p>
+
         </div>
 
+      </div>
+      
     </section>
 
   )

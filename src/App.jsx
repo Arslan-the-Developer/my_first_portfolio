@@ -10,23 +10,21 @@ function App() {
 
   return (
 
-    <section className='w-full relative h-screen bg-linear-to-b from-primary to-less-primary text-secondary flex flex-col items-center justify-center text-2xl'>
+    <Suspense fallback={
+      <section className='w-full h-screen bg-dull flex items-center justify-center'>
 
-      <div className='w-full h-full absolute opacity-100'>
+        <h2 className='font-poppins text-2xl tracking-wider text-primary font-semibold'>Loading.....</h2>
 
-      <Squares
-      speed={0.5} 
-      squareSize={35}
-      direction='right' // up, down, left, right, diagonal
-      borderColor='#09343b'
-      hoverFillColor='#05191c'
-      />
-      
-      </div>
+      </section>
+    }>
 
-      <MainScreen />
-      
-    </section>
+      <section className='w-full flex items-center justify-center'>
+
+        <MainScreen />
+
+      </section>
+
+    </Suspense>
   
   )
 
