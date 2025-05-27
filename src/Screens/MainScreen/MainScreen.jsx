@@ -56,12 +56,14 @@ function MainScreen() {
 
         </nav>
 
-        <div className='w-full flex items-center justify-center flex-col h-6/10 relative'>
+        <div className='w-full flex items-center justify-center flex-col h-6/10 relative max-md:h-5/10 max-md:justify-around'>
 
-          <motion.h1 initial={{y : -20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider' style={{fontSize : "8.5rem", lineHeight : '1.3'}}>ARSLAN</motion.h1>
-          <motion.h1 initial={{y : 20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider' style={{fontSize : "8.5rem", lineHeight : '1.3'}}>AHMAD</motion.h1>
+          <div className='w-full flex items-center justify-center flex-col relative'>
+            <motion.h1 initial={{y : -20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.2rem]' style={{lineHeight : '1.3'}}>ARSLAN</motion.h1>
+            <motion.h1 initial={{y : 20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.2rem]' style={{lineHeight : '1.3'}}>AHMAD</motion.h1>
 
-          <motion.img initial={{scale : 1.15, opacity : 0}} animate={{scale : 1, opacity : 100}} transition={{delay : 0.7}} className='w-60 h-60 rounded-full object-contain object-center aspect-square absolute bg-primary-translucent p-3' style={{boxShadow : "0 0 20px 0px #000000"}} src={PicThree} alt="" />
+            <motion.img initial={{scale : 1.15, opacity : 0}} animate={{scale : 1, opacity : 100}} transition={{delay : 0.7}} className='w-60 h-60 max-md:w-40 max-md:h-40 max-md:p-2 rounded-full object-contain object-center aspect-square absolute bg-primary-translucent p-3' style={{boxShadow : "0 0 20px 0px #000000"}} src={PicThree} alt="" />
+          </div>
 
         </div>
 
@@ -80,7 +82,7 @@ function MainScreen() {
             
           </div>
 
-          <motion.p initial={{y : 15, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 1}} className='mt-9 w-120 text-center text-primary capitalize font-poppins font-light leading-8'>I’m Arslan Ahmad – a Full Stack Web Developer & API Expert Passionately Creating Innovative, Scalable, and Secure Web Solutions to empower businesses For Over 3 Years</motion.p>
+          <motion.p initial={{y : 15, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 1}} className='mt-9 w-120 max-sm:w-80 text-center text-primary capitalize font-poppins font-light leading-8'>I’m Arslan Ahmad – a Full Stack Web Developer & API Expert Passionately Creating Innovative, Scalable, and Secure Web Solutions to empower businesses For Over 3 Years</motion.p>
 
         </div>
 
