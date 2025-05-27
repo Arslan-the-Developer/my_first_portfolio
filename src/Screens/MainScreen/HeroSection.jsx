@@ -14,7 +14,7 @@ function HeroSection() {
 
   return (
 
-    <section className='w-full h-screen bg-dull flex flex-col items-center  justify-center'>
+    <section className='w-full bg-dull flex flex-col items-center  justify-center' style={{height : "100svh"}}>
         <GridDistortion
         imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         grid={20}
