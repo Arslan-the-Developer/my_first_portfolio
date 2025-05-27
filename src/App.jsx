@@ -13,7 +13,7 @@ function App() {
     <Suspense fallback={
       <section className='w-full h-screen bg-dull flex items-center justify-center'>
 
-        <PuffLoader color={'#fca311'} size={120} />
+        <PuffLoader color={'#fca311'} size={80} />
 
       </section>
     }>

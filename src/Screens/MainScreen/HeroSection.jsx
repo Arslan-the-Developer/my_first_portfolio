@@ -17,11 +17,11 @@ function HeroSection() {
     <section className='w-full h-screen bg-dull flex flex-col items-center  justify-center'>
         <GridDistortion
         imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        grid={10}
-        mouse={0.4}
-        strength={0.15}
-        relaxation={0.9}
-        className="absolute opacity-60"
+        grid={20}
+        mouse={0.2}
+        strength={0.08}
+        relaxation={0.8}
+        className="absolute opacity-70"
       />
       
 
