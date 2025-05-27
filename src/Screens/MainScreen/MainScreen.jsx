@@ -30,7 +30,7 @@ function MainScreen() {
 
       <div className='min-w-[450px] w-7/10 h-full flex flex-col items-start justify-start pointer-events-none' style={{zIndex : "2"}}>
 
-        <nav className='flex items-center justify-between h-18 w-full'>
+        <nav className='flex items-center justify-between h-18 w-full max-sm:hidden'>
 
           <button onClick={() => setMenuOpen(!isMenuOpen)} className='flex items-center justify-center cursor-pointer pointer-events-auto'>
             {
@@ -56,18 +56,18 @@ function MainScreen() {
 
         </nav>
 
-        <div className='w-full flex items-center justify-center flex-col h-6/10 relative max-md:h-5/10 max-md:justify-around'>
+        <div className='w-full flex items-center justify-center flex-col h-6/10 relative max-md:h-4/10 max-md:justify-end'>
 
           <div className='w-full flex items-center justify-center flex-col relative'>
-            <motion.h1 initial={{y : -20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.2rem]' style={{lineHeight : '1.3'}}>ARSLAN</motion.h1>
-            <motion.h1 initial={{y : 20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.2rem]' style={{lineHeight : '1.3'}}>AHMAD</motion.h1>
+            <motion.h1 initial={{y : -20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.6rem]' style={{lineHeight : '1.3'}}>ARSLAN</motion.h1>
+            <motion.h1 initial={{y : 20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5.6rem]' style={{lineHeight : '1.3'}}>AHMAD</motion.h1>
 
-            <motion.img initial={{scale : 1.15, opacity : 0}} animate={{scale : 1, opacity : 100}} transition={{delay : 0.7}} className='w-60 h-60 max-md:w-40 max-md:h-40 max-md:p-2 rounded-full object-contain object-center aspect-square absolute bg-primary-translucent p-3' style={{boxShadow : "0 0 20px 0px #000000"}} src={PicThree} alt="" />
+            <motion.img initial={{scale : 1.15, opacity : 0}} animate={{scale : 1, opacity : 100}} transition={{delay : 0.7}} className='w-60 h-60 max-md:w-45 max-md:h-45 max-md:p-2 rounded-full object-contain object-center aspect-square absolute bg-primary-translucent p-3' style={{boxShadow : "0 0 20px 0px #000000"}} src={PicThree} alt="" />
           </div>
 
         </div>
 
-        <div className='w-full flex flex-col items-center justify-center'>
+        <div className='w-full flex flex-col items-center justify-center max-md:mt-10'>
 
           <div className='w-full flex items-center justify-center'>
 
