@@ -1,6 +1,6 @@
-import react, { useEffect, useState, Suspense, lazy } from 'react'
-import axios from 'axios'
-import Squares from '../src/Components/ReactBitComponents/Squares/Squares';
+import react, {Suspense, lazy } from 'react'
+import {PuffLoader} from 'react-spinners'
+
 
 const MainScreen = lazy(() => import('./Screens/MainScreen/MainScreen'));
 
@@ -13,7 +13,7 @@ function App() {
     <Suspense fallback={
       <section className='w-full h-screen bg-dull flex items-center justify-center'>
 
-        <h2 className='font-poppins text-2xl tracking-wider text-primary font-semibold'>Loading.....</h2>
+        <PuffLoader color={'#fca311'} size={120} />
 
       </section>
     }>
