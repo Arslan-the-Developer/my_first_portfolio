@@ -56,7 +56,7 @@ function HeroSection() {
 
         </nav>
 
-        <div className='w-full flex items-center justify-center flex-col h-6/10 relative max-md:h-4/10 max-md:justify-end'>
+        <div className='w-full flex items-center justify-center flex-col h-6/10 relative max-md:h-4/10 max-md:justify-end max-sm:-translate-y-3'>
 
           <div className='flex items-center justify-center flex-col relative'>
             <motion.h1 initial={{y : -20, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 0.5}} className='font-future text-primary tracking-wider text-[8.5rem] max-md:text-[6rem] max-sm:text-[5rem]' style={{lineHeight : '1.3'}}>ARSLAN</motion.h1>
