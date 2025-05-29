@@ -28,8 +28,8 @@ function AboutSection() {
 
           <div className='w-full flex flex-col items-center justify-center content-center transition-all mt-15'>
 
-            <h3 className='text-white w-full font-poppins font-thin italic text-center' style={{lineHeight : "1.4", fontSize : "calc(1.5rem + 1.5vw)"}}>
-              <span className='text-primary font-futura' style={{fontSize : "calc(2rem + 1.5vw)"}}>"</span> <span className='opacity-70' style={{textShadow : "0 0 10px #ffffff"}}>Infinite Loops of Creativity - <br /> Zero Bugs of Doubt</span> <span className='text-primary font-futura' style={{fontSize : "calc(1.6rem + 1.6vw)"}}>"</span>
+            <h3 className='text-white w-full font-poppins font-thin italic text-center' style={{lineHeight : "1.4", fontSize : "calc(1.3rem + 1.5vw)"}}>
+              <span className='text-primary font-futura' style={{fontSize : "calc(2rem + 1.5vw)"}}>"</span> <span className='opacity-70' style={{textShadow : "0 0 10px #ffffff"}}>Infinite Loops of Creativity - <br /> Zero Bugs of Doubt</span> <span className='text-primary font-futura' style={{fontSize : "calc(2rem + 1.5vw)"}}>"</span>
             </h3>
 
             <span className='w-40 h-[1px] bg-primary mt-15'></span>
