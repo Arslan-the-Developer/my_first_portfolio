@@ -14,7 +14,7 @@ function HeroSection() {
 
   return (
 
-    <section className='w-full bg-dull flex flex-col items-center  justify-center' style={{height : "100svh"}}>
+    <section className='w-full bg-dull flex flex-col items-center justify-center' style={{height : "100vh"}}>
         <GridDistortion
         imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         grid={20}
@@ -25,7 +25,7 @@ function HeroSection() {
       />
       
 
-      <div className='w-full h-full absolute pointer-events-none bg-linear-to-t from-dull to-transparent from-5%'></div>
+      <div className='w-full h-full absolute pointer-events-none bg-linear-to-t from-dull to-transparent from-25%'></div>
 
 
       <div className='w-7/10 max-sm:w-full h-full flex flex-col items-start justify-start pointer-events-none relative' style={{zIndex : "2"}}>
@@ -82,7 +82,7 @@ function HeroSection() {
             
           </div>
 
-          <motion.p initial={{y : 15, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 1}} className='mt-9 w-120 max-sm:w-80 text-center text-primary capitalize font-poppins font-light leading-8'>I’m Arslan Ahmad – a Full Stack Web Developer & API Expert Passionately Creating Innovative, Scalable, and Secure Web Solutions to empower businesses For Over 3 Years</motion.p>
+          <motion.p initial={{y : 15, opacity : 0}} animate={{y : 0, opacity : 100}} transition={{delay : 1}} className='mt-9 w-120 max-sm:w-80 max-sm:mt-11 text-center text-primary capitalize font-poppins font-light leading-8'>I’m Arslan Ahmad – a Full Stack Web Developer & API Expert Passionately Creating Innovative, Scalable, and Secure Web Solutions to empower businesses For Over 3 Years</motion.p>
 
         </div>
 
