@@ -15,20 +15,22 @@ function HeroSection() {
   return (
 
     <section className='w-full bg-dull flex flex-col items-center justify-center' style={{height : "100vh"}}>
-        <GridDistortion
-        imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        grid={20}
-        mouse={0.2}
-        strength={0.08}
-        relaxation={0.8}
-        className="absolute opacity-70"
-      />
+        <div className='w-full h-full absolute flex items-center justify-center' style={{zIndex : 1}}>
+          <GridDistortion
+              imageSrc="https://images.unsplash.com/photo-1738831920727-73e17adc5b87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              grid={15}
+              mouse={0.2}
+              strength={0.15}
+              relaxation={0.9}
+              className="opacity-65"
+            />
+        </div>
       
 
-      <div className='w-full h-full absolute pointer-events-none bg-linear-to-t from-dull to-transparent from-25%'></div>
+      <div className='w-full h-full absolute pointer-events-none bg-linear-to-t from-dull to-transparent from-40% to-55%' style={{zIndex : 2}}></div>
 
 
-      <div className='w-7/10 max-sm:w-full h-full flex flex-col items-start justify-start pointer-events-none relative' style={{zIndex : "2"}}>
+      <div className='w-7/10 max-sm:w-full h-full flex flex-col items-start justify-start pointer-events-none relative' style={{zIndex : "3"}}>
 
         <nav className='flex items-center justify-between h-18 w-full max-sm:px-3'>
 

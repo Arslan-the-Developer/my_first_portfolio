@@ -1,5 +1,5 @@
-import { useRef, useEffect } from "react";
-import * as THREE from "three";
+import { useRef, useEffect } from 'react';
+import * as THREE from 'three';
 
 const vertexShader = `
 uniform float time;
@@ -30,7 +30,7 @@ const GridDistortion = ({
   strength = 0.15,
   relaxation = 0.9,
   imageSrc,
-  className = "",
+  className = ''
 }) => {
   const containerRef = useRef(null);
   const imageAspectRef = useRef(1);
@@ -45,7 +45,7 @@ const GridDistortion = ({
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
       alpha: true,
-      powerPreference: "high-performance",
+      powerPreference: 'high-performance'
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
@@ -83,7 +83,7 @@ const GridDistortion = ({
       size,
       size,
       THREE.RGBAFormat,
-      THREE.FloatType,
+      THREE.FloatType
     );
     dataTexture.needsUpdate = true;
     uniforms.uDataTexture.value = dataTexture;
@@ -106,7 +106,9 @@ const GridDistortion = ({
 
       renderer.setSize(width, height);
 
-      const scale = Math.max(containerAspect / imageAspect, 1);
+      // Use Math.min to “contain” the image (no cropping)
+      const scale = Math.min(containerAspect / imageAspect, 1);
+
       plane.scale.set(imageAspect * scale, scale, 1);
 
       const frustumHeight = 1;
@@ -133,19 +135,12 @@ const GridDistortion = ({
 
     const handleMouseLeave = () => {
       dataTexture.needsUpdate = true;
-      Object.assign(mouseState, {
-        x: 0,
-        y: 0,
-        prevX: 0,
-        prevY: 0,
-        vX: 0,
-        vY: 0,
-      });
+      Object.assign(mouseState, { x: 0, y: 0, prevX: 0, prevY: 0, vX: 0, vY: 0 });
     };
 
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mouseleave", handleMouseLeave);
-    window.addEventListener("resize", handleResize);
+    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('resize', handleResize);
     handleResize();
 
     const animate = () => {
@@ -164,8 +159,7 @@ const GridDistortion = ({
 
       for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
-          const distance =
-            Math.pow(gridMouseX - i, 2) + Math.pow(gridMouseY - j, 2);
+          const distance = Math.pow(gridMouseX - i, 2) + Math.pow(gridMouseY - j, 2);
           if (distance < maxDist * maxDist) {
             const index = 4 * (i + size * j);
             const power = Math.min(maxDist / Math.sqrt(distance), 10);
@@ -181,9 +175,9 @@ const GridDistortion = ({
     animate();
 
     return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-      window.removeEventListener("resize", handleResize);
+      container.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('resize', handleResize);
       renderer.dispose();
       geometry.dispose();
       material.dispose();
@@ -195,7 +189,7 @@ const GridDistortion = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full h-full overflow-hidden ${className}`}
+      className={`w-full h-full object-center object-contain overflow-hidden ${className}`}
     />
   );
 };
