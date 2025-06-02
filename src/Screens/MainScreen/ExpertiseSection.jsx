@@ -1,7 +1,6 @@
 import React from 'react'
 import GridMotion from '../../Components/ReactBitComponents/GridMotion/GridMotion'
 import {motion} from 'motion/react'
-import DotGrid from '../../Components/ReactBitComponents/DotGrid/DotGrid'
 
 
 function ExpertiseSection() {
@@ -90,7 +89,106 @@ function ExpertiseSection() {
                 </motion.div>
             </div>
 
-            <div className='w-7/10 flex items-center justify-center'>
+            <div className='w-5/10 flex items-center justify-around mt-20 flex-wrap max-md:w-full'>
+            
+
+              <div className='flex items-center justify-center relative w-1/3'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#1a1a1a"} fill={"none"}>
+                      <path d="M12 6C8.4 6 7.16667 8.66667 7 10C7 10 7.81901 8.41169 9.86274 8.41169C12.3627 8.41169 12.5667 12 17.0667 12C20.7116 12 21.8333 9.51702 22 8.27554C22 8.27554 21.2198 9.67872 19.2198 9.67872C16.7296 9.67872 16.4134 6 12 6Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                      <path d="M7 12C3.4 12 2.16667 14.6667 2 16C2 16 2.81901 14.4117 4.86274 14.4117C7.36274 14.4117 7.56671 18 12.0667 18C15.7116 18 16.8333 15.517 17 14.2755C17 14.2755 16.2198 15.6787 14.2198 15.6787C11.7296 15.6787 11.4134 12 7 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26  opacity-30 absolute'></span>
+
+              </div>
+              <div className='flex items-center justify-center relative w-1/3'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#000000"} fill={"none"}>
+                      <path d="M11 5.49976V5.50976" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M13 18.4898V18.4998" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M17.498 8.5H15.4989V6.5C15.4989 5.09554 15.4989 4.39331 15.1618 3.88886C15.0159 3.67048 14.8284 3.48298 14.61 3.33706C14.1056 3 13.4033 3 11.9989 3C10.5944 3 9.89218 3 9.38773 3.33706C9.16935 3.48298 8.98185 3.67048 8.83593 3.88886C8.49887 4.39331 8.49887 5.09554 8.49887 6.5V8.5H6.49805C5.09358 8.5 4.39135 8.5 3.88691 8.83706C3.66853 8.98298 3.48103 9.17048 3.33511 9.38886C2.99805 9.89331 2.99805 10.5955 2.99805 12C2.99805 13.4045 2.99805 14.1067 3.33511 14.6111C3.48102 14.8295 3.66853 15.017 3.88691 15.1629C4.39135 15.5 5.09358 15.5 6.49805 15.5H8.49887V17.5C8.49887 18.9045 8.49887 19.6067 8.83593 20.1111C8.98185 20.3295 9.16935 20.517 9.38773 20.6629C9.89218 21 10.5944 21 11.9989 21C13.4033 21 14.1056 21 14.61 20.6629C14.8284 20.517 15.0159 20.3295 15.1618 20.1111C15.4989 19.6067 15.4989 18.9045 15.4989 17.5V15.5H17.498C18.9025 15.5 19.6047 15.5 20.1092 15.1629C20.3276 15.017 20.5151 14.8295 20.661 14.6111C20.998 14.1067 20.998 13.4045 20.998 12C20.998 10.5955 20.998 9.89331 20.661 9.38886C20.5151 9.17048 20.3276 8.98298 20.1092 8.83706C19.6047 8.5 18.9025 8.5 17.498 8.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M15.5 8.5V12H8.5V15.5M12 15.5H15.5M8.5 8.5H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26 opacity-30 absolute'></span>
+
+              </div>
+
+              <div className='flex items-center justify-center relative w-1/3'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#000000"} fill={"none"}>
+                      <path d="M8.00001 12C8.00001 6.47715 9.79087 2 12 2C14.2091 2 16 6.47715 16 12C16 17.5228 14.2091 22 12 22C9.79087 22 8.00001 17.5228 8.00001 12Z" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M9.97531 8.61921C14.8173 5.85779 19.649 5.17014 20.7673 7.08331C21.8855 8.99648 18.8667 12.786 14.0247 15.5474C9.18271 18.3088 4.35098 18.9965 3.23277 17.0833C2.11455 15.1701 5.13329 11.3806 9.97531 8.61921Z" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M14.0247 8.61921C18.8667 11.3806 21.8855 15.1701 20.7673 17.0833C19.649 18.9965 14.8173 18.3088 9.97531 15.5474C5.13329 12.786 2.11455 8.99648 3.23277 7.08331C4.35098 5.17014 9.18271 5.85779 14.0247 8.61921Z" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12Z" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26 opacity-30 absolute'></span>
+
+              </div>
+              
+              <div className='flex items-center justify-center relative w-1/3 mt-15'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#1a1a1a"} fill={"none"}>
+                      <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M6 13.5L7.5 9L9.375 13.5M6 13.5L5.5 15M6 13.5H9.375M9.375 13.5L10 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12.5 12V9.7C12.5 9.51387 12.5 9.42081 12.5245 9.34549C12.5739 9.19327 12.6933 9.07393 12.8455 9.02447C12.9208 9 13.0139 9 13.2 9H14.5C15.3284 9 16 9.67157 16 10.5C16 11.3284 15.3284 12 14.5 12H12.5ZM12.5 12V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M18.5 9V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26 opacity-30 absolute'></span>
+
+              </div>
+              <div className='flex items-center justify-center relative w-1/3 mt-15'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#1a1a1a"} fill={"none"}>
+                      <ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M20 12C20 13.6569 16.4183 15 12 15C7.58172 15 4 13.6569 4 12" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M20 5V19C20 20.6569 16.4183 22 12 22C7.58172 22 4 20.6569 4 19V5" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M8 8V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M8 15V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26 opacity-30 absolute'></span>
+
+              </div>
+              <div className='flex items-center justify-center relative w-1/3 mt-15'>
+
+                <span className='bg-primary rounded-full w-28 h-28 max-md:w-22 max-md:h-22 flex items-center justify-center' style={{zIndex : 1}}>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={46} height={46} color={"#1a1a1a"} fill={"none"}>
+                      <path d="M13.5 13L17 9M14 15C14 16.1046 13.1046 17 12 17C10.8954 17 10 16.1046 10 15C10 13.8954 10.8954 13 12 13C13.1046 13 14 13.8954 14 15Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M6 12C6 8.68629 8.68629 6 12 6C13.0929 6 14.1175 6.29218 15 6.80269" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <path d="M2.50006 12.0001C2.50006 7.52172 2.50006 5.28255 3.8913 3.8913C5.28255 2.50006 7.52172 2.50006 12.0001 2.50006C16.4784 2.50006 18.7176 2.50006 20.1088 3.8913C21.5001 5.28255 21.5001 7.52172 21.5001 12.0001C21.5001 16.4784 21.5001 18.7176 20.1088 20.1088C18.7176 21.5001 16.4784 21.5001 12.0001 21.5001C7.52172 21.5001 5.28255 21.5001 3.8913 20.1088C2.50006 18.7176 2.50006 16.4784 2.50006 12.0001Z" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+
+                </span>
+
+                <span className='bg-primary rounded-full p-10 w-32 h-32 max-md:w-26 max-md:h-26 opacity-30 absolute'></span>
+
+              </div>
+
 
             </div>
 
