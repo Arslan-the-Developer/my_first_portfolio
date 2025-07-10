@@ -23,3 +23,20 @@
     --font-futura : 'Futura', sans-serif;
 
 }
+
+
+@keyframes shadowGlow {
+
+    0%{
+        box-shadow: -2px 0 5px 0px #fca311;
+    }
+
+    50%{
+        box-shadow: 2px 0 15px 0px #fca311;
+    }
+    
+    100%{
+        box-shadow: -2px 0 5px 0px #fca311;
+    }
+    
+}
