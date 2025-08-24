@@ -10,9 +10,9 @@ function ExpertiseSection() {
 
   return (
 
-    <section className='w-full flex flex-col items-center justify-start h-screen relative' >
+    <section className='w-full flex flex-col h-full items-center justify-start bg-transparent py-8 rounded-4xl border-2 border-primary backdrop-blur-3xl' style={{zIndex : 3, boxShadow : "0 0 15px 0px #fca311"}}>
         
-        <div className='w-full h-full flex flex-col items-center justify-start py-10 bg-dull'>
+        <div className='w-full h-full flex flex-col items-center justify-start py-10'>
 
             <div className='flex items-center justify-center relative'>
                 <motion.div initial={{scale : 0.7, opacity : 0}} animate={{scale : 1, opacity : 100}} transition={{delay : 0.8}} className='my-4 flex items-center justify-center relative'>

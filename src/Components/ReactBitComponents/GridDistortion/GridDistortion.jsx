@@ -106,8 +106,8 @@ const GridDistortion = ({
 
       renderer.setSize(width, height);
 
-      // Use Math.min to “contain” the image (no cropping)
-      const scale = Math.min(containerAspect / imageAspect, 1);
+      // COVER instead of CONTAIN
+      const scale = Math.max(containerAspect / imageAspect, 1);
 
       plane.scale.set(imageAspect * scale, scale, 1);
 
@@ -121,6 +121,7 @@ const GridDistortion = ({
 
       uniforms.resolution.value.set(width, height, 1, 1);
     };
+
 
     const mouseState = { x: 0, y: 0, prevX: 0, prevY: 0, vX: 0, vY: 0 };
 
