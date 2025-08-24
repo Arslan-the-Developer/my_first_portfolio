@@ -8,7 +8,7 @@ function AboutSection() {
 
   return (
 
-    <section className='w-full flex flex-col h-full items-center justify-start bg-transparent py-8 rounded-4xl border-2 border-primary backdrop-blur-3xl' style={{zIndex : 3, boxShadow : "0 0 15px 0px #fca311"}}>
+    <section className='w-full flex flex-col h-full items-center justify-start bg-transparent py-8 rounded-4xl border-2 border-primary max-sm:border-none' style={{zIndex : 3, boxShadow : "0 0 15px 0px #fca311"}}>
 
         <div className='h-full max-md:w-full flex flex-col items-center justify-start'>
 
