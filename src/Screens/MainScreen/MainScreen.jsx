@@ -23,12 +23,16 @@ function MainScreen() {
           <HeroSection />
         </ScrollStackItem>
 
-        <ScrollStackItem itemClassName='bg-[#1c1c1c20] bg-clip-padding backdrop-blur-xl flex flex-col items-center justify-center rounded-4xl'>
+        <ScrollStackItem itemClassName='bg-[#1c1c1c70] bg-clip-padding backdrop-blur-xl flex flex-col items-center justify-center rounded-4xl'>
           <AboutSection />
         </ScrollStackItem>
 
         <ScrollStackItem itemClassName='bg-[#1c1c1c20] bg-clip-padding backdrop-blur-xl flex flex-col items-center justify-center rounded-4xl'>
           <ExpertiseSection />
+        </ScrollStackItem>
+        
+        <ScrollStackItem itemClassName='bg-[#1c1c1c20] bg-clip-padding backdrop-blur-xl flex flex-col items-center justify-center rounded-4xl'>
+          <ProjectsSection />
         </ScrollStackItem>
 
       </ScrollStack>
