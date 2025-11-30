@@ -21,9 +21,11 @@ function ProjectsSection() {
           </motion.div>
         </div>
 
-        <div className='w-[90%] flex flex-wrap items-start justify-between mt-12 h-full overflow-x-hidden overflow-y-scroll'>
+        <div
+            className="w-[90%] flex flex-wrap items-start justify-between mt-12 h-full overflow-x-hidden overflow-y-auto"
+          >
 
-            <div className='w-[49%] h-[62%] flex flex-col items-center justify-center relative overflow-hidden rounded-xl group shadow-xl max-md:w-full max-md:mt-3'>
+            <div className='w-[49%] h-[62%] flex flex-col items-center justify-center relative overflow-hidden rounded-xl group shadow-xl max-md:w-full max-md:mt-3 max-sm:h-[45%] max-sm:mt-1'>
 
               <div className='w-full h-full bg-center bg-no-repeat bg-cover transition-all group-hover:scale-110 group-hover:rotate-3 duration-200' style={{backgroundImage : `url('${VendezyImage}')`}}></div>
 
@@ -47,7 +49,8 @@ function ProjectsSection() {
 
 
             </div>
-            <div className='w-[49%] h-[62%] flex flex-col items-center justify-center relative overflow-hidden rounded-xl group shadow-xl max-md:w-full max-md:mt-3'>
+            
+            <div className='w-[49%] h-[62%] flex flex-col items-center justify-center relative overflow-hidden rounded-xl group shadow-xl max-md:w-full max-md:mt-3 max-sm:h-[45%] max-sm:mt-1'>
 
               <div className='w-full h-full bg-center bg-no-repeat bg-cover transition-all group-hover:scale-110 group-hover:rotate-3 duration-200' style={{backgroundImage : `url('${VendezyImage}')`}}></div>
 
